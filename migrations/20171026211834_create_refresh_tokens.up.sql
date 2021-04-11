@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS {{ index .Options "Namespace" }}refresh_tokens (
   id BIGSERIAL NOT NULL,
   token varchar(255) DEFAULT NULL,
   user_id varchar(255) DEFAULT NULL,
-  revoked smallint DEFAULT NULL,
+  revoked boolean DEFAULT FALSE,
   created_at timestamp NULL DEFAULT NULL,
   PRIMARY KEY (id)
 );
